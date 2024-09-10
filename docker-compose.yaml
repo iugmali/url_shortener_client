@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  url_shortener_client:
+    build:
+      context: .
+    container_name: url_shortener_client
+    restart: always
+    ports:
+      - "3888:80"
+    networks:
+      - nginx-proxy-manager_default
+
+
+networks:
+  nginx-proxy-manager_default:
+    external: true

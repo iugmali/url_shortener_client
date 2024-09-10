@@ -1,0 +1,13 @@
+body {
+    background-color: #340634;
+    color: azure;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+}
+
+p {
+
+}
