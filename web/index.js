@@ -49,6 +49,6 @@ Swal.fire({
     timer: 1500,
     timerProgressBar: true,
     toast: true,
-    position: 'top-right'
+    position: 'center',
   });
 });
