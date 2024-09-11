@@ -1,7 +1,7 @@
 const pUrl = document.getElementById('url');
 
 Swal.fire({
-  title: 'Link para encurtar',
+  title: 'Cole o link para encurtar',
   input: 'text',
   inputAttributes: {
     autocapitalize: 'off'
@@ -12,7 +12,7 @@ Swal.fire({
   backdrop: 'rgba(255,255,255,0.4)',
   allowOutsideClick: false,
   showCancelButton: false,
-  confirmButtonText: 'ENTRAR',
+  confirmButtonText: 'ENCURTAR',
   confirmButtonColor: '#351151',
   showLoaderOnConfirm: true,
   preConfirm: async (link) => {
@@ -38,5 +38,5 @@ Swal.fire({
     })
   });
   const data = await response.json();
-  pUrl.innerText = JSON.stringify(data);
+  pUrl.innerText = data.data.shortUrl;
 });

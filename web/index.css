@@ -1,11 +1,16 @@
 body {
     background-color: #340634;
     color: azure;
+    height: 100vw;
+    width: 100%;
 }
 
 main {
-    display: grid;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vw;
 }
 
 p {

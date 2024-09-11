@@ -6,8 +6,10 @@ services:
       context: .
     container_name: url_shortener_client
     restart: always
-    ports:
-      - "3888:80"
+#    ports:
+#      - "3888:80"
+#    volumes:
+#      - ./web:/usr/share/nginx/html
     networks:
       - nginx-proxy-manager_default
 
