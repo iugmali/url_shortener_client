@@ -20,7 +20,7 @@ Swal.fire({
       if (link.trim() === '') {
         Swal.showValidationMessage(`Não é um link válido`);
       }
-      const response = await fetch(link);
+      const response = await fetch(link, {mode: 'no-cors'});
       if (!response.ok) {
         Swal.showValidationMessage(`Não é um link válido`);
       }
@@ -39,4 +39,16 @@ Swal.fire({
   });
   const data = await response.json();
   pUrl.innerText = data.data.shortUrl;
+  await navigator.clipboard.writeText(data.data.shortUrl);
+
+  Swal.fire({
+    text: `O link gerado já foi copiado`,
+    color: 'white',
+    showConfirmButton: false,
+    background: '#340634',
+    timer: 1500,
+    timerProgressBar: true,
+    toast: true,
+    position: 'top-right'
+  });
 });
