@@ -21,7 +21,7 @@ Swal.fire({
         Swal.showValidationMessage(`Não é um link válido`);
       }
       const response = await fetch(link, {mode: 'no-cors'});
-      if (!response.ok) {
+      if (!(response.ok || response.status === 0)) {
         Swal.showValidationMessage(`Não é um link válido`);
       }
     } catch (error) {
