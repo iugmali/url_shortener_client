@@ -1,7 +1,7 @@
 const pUrl = document.getElementById('url');
 
 Swal.fire({
-  title: 'Cole o link para encurtar',
+  title: 'URL',
   input: 'text',
   inputAttributes: {
     autocapitalize: 'off'
@@ -12,7 +12,7 @@ Swal.fire({
   backdrop: 'rgba(255,255,255,0.4)',
   allowOutsideClick: false,
   showCancelButton: false,
-  confirmButtonText: 'ENCURTAR',
+  confirmButtonText: 'Shrink the URL\n',
   confirmButtonColor: '#351151',
   showLoaderOnConfirm: true,
   preConfirm: async (link) => {
