@@ -11,9 +11,9 @@ services:
     volumes:
       - ./web:/usr/share/nginx/html
     networks:
-      - nginx-proxy-manager_default
+      - url-shortener-client
 
 
 networks:
-  nginx-proxy-manager_default:
-    external: true
+  url-shortener-client:
+    driver: bridge
